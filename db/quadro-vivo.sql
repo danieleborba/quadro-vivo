@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `usuario` VARCHAR(45) NOT NULL UNIQUE,
   `nome` VARCHAR(100) NOT NULL,
   `email` VARCHAR(45) NOT NULL UNIQUE,
-  `senha` VARCHAR(45) NOT NULL,
+  `senha` VARCHAR(225) NOT NULL,
   `telefone` VARCHAR(13) NULL UNIQUE,
   `dataNascimento` DATE NULL,
   `fusoHorario` INT(2) NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 CREATE TABLE IF NOT EXISTS `wifi` (
   `codigo` INT AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
-  `senha` VARCHAR(45) NOT NULL,
+  `senha` VARCHAR(225) NOT NULL,
   PRIMARY KEY (`codigo`));
 
 
@@ -126,7 +126,6 @@ INSERT INTO tipoPlanta VALUES
 (DEFAULT, 'Hortaliça'),
 (DEFAULT, 'Ornamental'),
 (DEFAULT, 'Cacto/Suculenta');
-
 
 INSERT INTO planta VALUES
 (DEFAULT, 'Lactuca sativa var. crispa', 'Alface', 'O valor energético da alface é baixo, pois seu conteúdo em água representa 95% do seu peso. A alface contém ferro, mineral com importante papel no transporte de oxigênio no organismo. Contém fibras, que auxiliam na digestão e no bom funcionamento do intestino, além de apresentar pequenos teores de minerais como cálcio e fósforo.'),

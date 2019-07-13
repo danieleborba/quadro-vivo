@@ -102,7 +102,6 @@
 					$i++;
 				}
 				$sql .= ")";
-				echo $sql."<br>";
 				$stmt = $this->geraStmt($sql, $vetor, $campos);
 				
 				$stmt->execute();
