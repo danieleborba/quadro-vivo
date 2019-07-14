@@ -3,13 +3,12 @@
     require('../autoload.php');
 
     class TipoQuadro extends CodigoDescricao {
-        function TipoQuadro($codigo, $descricao) {
-            $this->setCodigo($codigo);
-            $this->setDescricao($descricao);
-        }
-
-        function __toString() {
-            return $this->getCodigo() .' '. $this->getDescricao();
+        // TUDO
+        function TipoQuadro($descricao) {
+            $crud = new Crud;
+            $GLOBALS['quadro'] = $crud->select('select * from tipoQuadro where descricao = "'.$descricao.'"');
+            $this->setCodigo($GLOBALS['quadro'][0][0]);
+            $this->setDescricao($GLOBALS['quadro'][0][1]);
         }
     }
 

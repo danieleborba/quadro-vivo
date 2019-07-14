@@ -2,8 +2,10 @@
 
 	require('../autoload.php');
 
-    $planta = new Planta('NULL', 'Daniele voigt', 'Dani', 'Chá gostoso');
-    echo $planta;
-    $planta->salvarPlanta();
+    $planta1 = new Planta('NULL', 'Daniele voigt', 'Dani', 'Chá gostoso');
+    $planta2 = new Planta('NULL', 'Dani', 'Dani', 'Chá');
+
+    $usuario = new Usuario;
+    echo $usuario->setPlanta([$planta1,$planta2]);
 
 ?>

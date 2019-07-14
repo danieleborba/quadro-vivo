@@ -26,12 +26,15 @@
 		function salvarPlanta() {
 			$crud = new Crud;
 			$crud->setTabela('planta');
-			$crud->inserir([
+			if($crud->inserir([
                 $this->getCodigo(),
                 $this->getEspecie(),
 				$this->getNome(),
 				$this->getDescricao()
-			]);
+            ])) {
+                $cod = $crud->select('select max(codigo) from planta');
+                $this->setCodigo($cod[0][0]);
+            }
 		}
 
         // MOSTRAR

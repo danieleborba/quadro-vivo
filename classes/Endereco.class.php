@@ -88,6 +88,9 @@
 				$this->getCidade(),
 				$this->getEstado(),
 			]);
+			
+			$cod = $crud->select('select max(codigo)from endereco');
+			$this->setCodigo($codigoEndereco);
 		}
         
 		function __toString() {

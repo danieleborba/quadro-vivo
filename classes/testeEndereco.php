@@ -2,7 +2,7 @@
 
 	require('../autoload.php');
 
-    $endereco = new Endereco('NULL', 'Abraham Lincoln', 2, '301', 'Jd. América', 'Rio do Sul', 'SC');
+    $endereco = new Endereco('NULL', 'Marte', 4, '', 'Em cima', 'Sistema Solar', 'Via Láctea');
 
     echo $endereco;
 
