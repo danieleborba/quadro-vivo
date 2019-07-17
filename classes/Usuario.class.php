@@ -13,7 +13,7 @@
 				$endereco, 
 				$tipoQuadro,
 				$wifi;
-		private $planta = array();
+		public $planta = array();
 	
 		// USUÁRIO
 		function setUsuario($usuario) {
@@ -112,13 +112,14 @@
 		function setPlanta($planta) {
 			for ($i=0; $i < count($planta); $i++) { 
 				if ($planta instanceof Planta)
-				$this->planta[] = $planta[$i];
+				$this->planta[$i] = $planta[$i];
 			}
-			return count($planta);
 		}
 
 		function getPlanta() {
-			
+			for ($i=0; $i < count($this->planta); $i++) { 
+				echo $this->planta[$i];
+			}
 		}
 
 		// TUDO

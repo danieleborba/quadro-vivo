@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <?php 
-  include('conf/conf.inc.php');
-  include('connect/connect.php');
-//   include('valida.php');
+
   include('funcoes.php');
 ?>
 <html lang="en">

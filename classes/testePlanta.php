@@ -7,5 +7,6 @@
 
     $usuario = new Usuario;
     echo $usuario->setPlanta([$planta1,$planta2]);
+    //echo $usuario->getPlanta();
 
 ?>

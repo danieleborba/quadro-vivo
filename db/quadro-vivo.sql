@@ -113,6 +113,14 @@ CREATE TABLE IF NOT EXISTS `planta_has_tipoPlanta` (
     FOREIGN KEY (`tipoPlanta_codigo`)
     REFERENCES `tipoPlanta` (`codigo`));
     
+-- -----------------------------------------------------
+-- `adm`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `adm` (
+  `codigo` INT AUTO_INCREMENT,
+  `usuario` VARCHAR(45) NOT NULL UNIQUE,
+  `senha` VARCHAR(225) NOT NULL,
+  PRIMARY KEY (`codigo`));
 
 INSERT INTO tipoQuadro VALUES
 (DEFAULT, 'Mini'),
