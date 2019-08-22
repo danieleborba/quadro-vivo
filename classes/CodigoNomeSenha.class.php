@@ -1,12 +1,12 @@
 <?php
 
-	require('../autoload.php');
+	require('autoload.php');
 
 	class CodigoNomeSenha extends CodigoNome {
 		private $senha;
 	
 		function setSenha($senha) {
-			$this->senha = password_hash($senha, PASSWORD_DEFAULT);
+			$this->senha = hash('sha512', $senha);
 		}
 
 		function getSenha() {

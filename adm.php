@@ -1,7 +1,7 @@
 <?php 
-  include('funcoes.php');
-  include('autoload.php');
-//   include('valida.php');
+	include('funcoes.php');
+	include('autoload.php');
+	include('valida.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

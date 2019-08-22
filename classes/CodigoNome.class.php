@@ -1,6 +1,6 @@
 <?php
 
-    require('../autoload.php');
+    require('autoload.php');
 
     abstract class CodigoNome extends Codigo {
         private $nome;

@@ -1,6 +1,6 @@
 <?php
 
-    require_once('../autoload.php');
+    require_once('autoload.php');
 
     abstract class CodigoDescricao extends Codigo {
         private $descricao;

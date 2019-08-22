@@ -1,83 +1,99 @@
-<!DOCTYPE html>
 <?php	
-	include('conf/conf.inc.php');
-	include('connect/connect.php');
 	include('valida.php');
 	include('funcoes.php');
+	include('autoload.php');
 ?>
-	<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Quadro Vivo</title>
+	<?php gerarCSS() ?>
+	<style type="text/css">
+		body {
+			display: flex;
+			min-height: 100vh;
+			flex-direction: column;
+		}
 
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Quadro Vivo</title>
+		main {
+			flex: 1 0 auto;
+		}
 
-		<!-- CSS  -->
-		<link rel="shortcut icon" type="imagem/x-icon" href="img/plant.png">
-		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-		<link href="css/material-icons.css" rel="stylesheet">
-		<style type="text/css">
-			body {
-				display: flex;
-				min-height: 100vh;
-				flex-direction: column;
-			}
+		h4 {
+			letter-spacing: 0.05rem;
+		}
 
-			main {
-				flex: 1 0 auto;
-			}
+		@media only screen and (max-width: 600px) {
+		  .frame {
+			max-width: 100%;
+		  
+		  }
+		}
 
-			@media only screen and (max-width: 600px) {
-			  .frame {
-			    max-width: 100%;
-			  }
-			}
+	</style>
+</head>
+<body>
 
-		</style>
-	</head>
+	<header>
+		<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+	</header>
 
-	<body>
-		<header>
-			<?php gerarNavUsuario() ?>
-		</header>
+	<main>
+		<div class="row">
+			<div class="col l3">
+				<ul id="slide-out" class="sidenav sidenav-fixed black-text center" style="padding-top: 20vh">
+					<li><img src="img/mao.svg" width="80rem" alt="logo do Quadro Vivo"></li>
+					<li class="grey lighten-3"><a href="#!">Monitoramento</a></li>
+					<li><a href="#!">Configurações</a></li>
+					<li><a href="#!">Perfil</a></li>
+					<li><a href="#!">Ajuda</a></li>
+					<li><a href="#!">Sair</a></li>
+				</ul>
+			</div>
 
-		<main>
-
-			<div class="container center">
-				<div class='row'><br>
-					<h4 style="color: green">Monitoramento</h4>
-				</div>
-
+			<div class="col l9 s12 center">
 				<div class="row">
-					<div class="col l12">
-						<iframe src="https://console.thinger.io/#/dashboard/dash_quadrovivo?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJEYXNoYm9hcmRfZGFzaF9xdWFkcm92aXZvIiwidXNyIjoicXVhZHJvdml2byJ9.VorBzHiPp0J-r2viw9CmJae0Ng8OCbBh3WJuk9M3Ctw" width="600px" height="1000px" class="frame"></iframe>
+					<div class="col ls2">
+						<h4 class="green-text text-darken-3">Monitoramento</h4>
+						<div id="curve_chart" style="width: 900px; height: 500px"></div>
 					</div>
 				</div>
-
-
 			</div>
+		</div>
+	</main>
 
-			</div>
-			</div>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script type="text/javascript">
+	  google.charts.load('current', {'packages':['corechart']});
+	  google.charts.setOnLoadCallback(drawChart);
 
-			<br><br>
+	  function drawChart() {
+		var data = google.visualization.arrayToDataTable([
+		  ['Horário', 'Humidade 1', 'Luminosidade'],
+		  ['2004',  1000,      400],
+		  ['2005',  1170,      460],
+		  ['2006',  660,       1120],
+		  ['2007',  1030,      540]
+		]);
 
-		</main>
+		var options = {
+		  title: 'Quadro Vivo',
+		  curveType: 'function',
+		  legend: { position: 'bottom' }
+		};
 
-		<?php echo gerarFooter() ?>
+		var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
-		<!--  Scripts-->
-		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script src="js/materialize.js"></script>
-		<script src="js/init.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$('select').formSelect();
-			});
+		chart.draw(data, options);
+	  }
+	</script>
 
-		</script>
-
-	</body>
-
-	</html>
+	<?php
+		gerarScripts();
+	?>
+</body>
+</html>

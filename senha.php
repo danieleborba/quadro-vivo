@@ -1,1 +1,1 @@
-<?php echo hash('sha512', 'dani'); ?>
+<?php echo hash('sha512', 'ifcatarinense'); ?>

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-	<meta name=\ "viewport\" content=\ "width=device-width, initial-scale=1, user-scalable=no\"/>
+	<meta name="viewport\" content="width=device-width, initial-scale=1, user-scalable=no\"/>
 	<title>{v}</title>
 	<!-- /HTTP_HEAD -->
 	<!-- HTTP_STYLE -->
@@ -82,10 +82,10 @@
 
 
 		<!-- HTTP_PORTAL_OPTIONS -->
-		<form action=\ "/wifi\" method=\ "get\"><button>Configure WiFi</button></form><br/>
-		<form action=\ "/0wifi\" method=\ "get\"><button>Configure WiFi (No Scan)</button></form><br/>
-		<form action=\ "/i\" method=\ "get\"><button>Info</button></form><br/>
-		<form action=\ "/r\" method=\ "post\"><button>Reset</button></form>
+		<form action="/wifi\" method="get\"><button>Configure WiFi</button></form><br/>
+		<form action="/0wifi\" method="get\"><button>Configure WiFi (No Scan)</button></form><br/>
+		<form action="/i\" method="get\"><button>Info</button></form><br/>
+		<form action="/r\" method="post\"><button>Reset</button></form>
 		<!-- /HTTP_PORTAL_OPTIONS -->
 
 		<div><a href='#' onclick='c(this)'>{v}</a> <span class="q {i}">{r}%</span></div>
@@ -107,7 +107,7 @@
 		<!-- /HTTP_FORM_END -->
 		<!-- HTTP_SCAN_LINK -->
 		<br/>
-		<div class=\ "c\"><a href=\ "/wifi\">Scan</a></div>
+		<div class="c\"><a href="/wifi\">Scan</a></div>
 		<!-- /HTTP_SCAN_LINK -->
 		<!-- HTTP_SAVED -->
 		<div>Credentials Saved<br />Trying to connect ESP to network.<br />If it fails reconnect to AP to try again</div>

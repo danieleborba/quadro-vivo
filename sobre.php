@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<?php 
-  include('conf/conf.inc.php');
-  include('connect/connect.php');
+<?php
   include('funcoes.php');
 ?>
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,7 +13,6 @@
 	<link rel="shortcut icon" type="imagem/x-icon" href="img/plant.png">
 	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
 	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-<<<<<<< HEAD
 	<style type="text/css">
 		@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,700i&display=swap&subset=latin-ext');
 
@@ -29,8 +25,6 @@
 		}
 		
 	</style>
-=======
->>>>>>> parent of 50e7b66... salvando essa versão dessa bosta do krlho
 </head>
 
 <body>
@@ -51,44 +45,11 @@
 			</div>
 		</div>
 
-
-<<<<<<< HEAD
-		<div class="section">
-			<!--   Icon Section   -->
-			<div class="row">
-				<div class="col s12 l4">
-					<div class="icon-block">
-						<h2 class="center green-text"><i class="material-icons">wifi</i></h2>
-						<h5 class="center">1</h5>
-=======
->>>>>>> parent of 50e7b66... salvando essa versão dessa bosta do krlho
-
-		<!-- <div class="parallax-container valign-wrapper">
-			<div class="section no-pad-bot">
-				<div class="container">
-					<div class="row center">
-						<h5 class="header col s12">Os microcontroladores cuidam de tudo.</h5>
-					</div>
-				</div>
-<<<<<<< HEAD
-
-				<div class="col s12 l4">
-					<div class="icon-block">
-						<h2 class="center green-text"><i class="material-icons">devices</i></h2>
-						<h5 class="center">2</h5>
-=======
-			</div>
-			<div class="parallax"><img src="img/microcontroladores.png" alt="Unsplashed background img 3"></div>
-		</div>
- -->
->>>>>>> parent of 50e7b66... salvando essa versão dessa bosta do krlho
-
 		<div class="container">
 			<div class="section">
 
-				<!--   Icon Section   -->
 				<div class="row">
-					<div class="col s12 m4">
+					<div class="col s12 l8 offset-l2">
 						<div class="icon-block">
 							<h2 class="center red-text"><i class="material-icons">wifi</i></h2>
 							<h5 class="center">1</h5>
@@ -97,23 +58,16 @@
 						</div>
 					</div>
 
-<<<<<<< HEAD
-				<div class="col s12 l4">
-					<div class="icon-block">
-						<h2 class="center green-text"><i class="material-icons">nature_people</i></h2>
-						<h5 class="center">3</h5>
-=======
-					<div class="col s12 m4">
+					<div class="col s12 l8 offset-l2">
 						<div class="icon-block">
 							<h2 class="center red-text"><i class="material-icons">devices</i></h2>
 							<h5 class="center">2</h5>
->>>>>>> parent of 50e7b66... salvando essa versão dessa bosta do krlho
 
 							<p class="light center">Acesse a interface do Quadro Vivo em seu computador ou celular e receba gráficos em tempo real mostrando a quantidade de água e luz que as plantas estão recebendo em tempo real. Desligue ou ligue o Quadro a hora que quiser e em qualquer lugar por meio da internet.</p>
 						</div>
 					</div>
 
-					<div class="col s12 m4">
+					<div class="col s12 l8 offset-l2">
 						<div class="icon-block">
 							<h2 class="center red-text"><i class="material-icons">nature_people</i></h2>
 							<h5 class="center">3</h5>
@@ -129,16 +83,53 @@
 		</div>
 		</div>
 
-		<!-- <div class="parallax-container valign-wrapper">
+		
+		<div class="container">
+			<div class="section">
+
+				<!--   Icon Section   -->
+				<div class="row">
+					<div class="col s12 m4">
+						<div class="icon-block">
+							<h2 class="center red-text"><i class="material-icons">flash_on</i></h2>
+							<h5 class="center">Automatizado</h5>
+
+							<p class="center">A rega e a iluminação acontecem automaticamente por meio de sensores e microcontroladores.</p>
+						</div>
+					</div>
+
+					<div class="col s12 m4">
+						<div class="icon-block">
+							<h2 class="center red-text"><i class="material-icons">group</i></h2>
+							<h5 class="center">Interativo</h5>
+
+							<p class="center">Receba gráficos e informações sobre a saúde e a utilidade de suas plantas.</p>
+						</div>
+					</div>
+
+					<div class="col s12 m4">
+						<div class="icon-block">
+							<h2 class="center red-text"><i class="material-icons">settings</i></h2>
+							<h5 class="center">Personalizável</h5>
+
+							<p class="center">Escolha a arquitetura que melhor se adequea à sua casa e selecione as plantas que deseja.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="parallax-container valign-wrapper" style="height: 70vh">
 			<div class="section no-pad-bot">
 				<div class="container">
 					<div class="row center">
-						<h5 class="header col s12 light">Por meio da automação, suas plantas permanecem felizes e saudáveis.</h5>
+						<h5 class="header col s12 light white-text" style="text-shadow: 1.5px 1.5px black; font-size: 2.5rem">Acabe com as preocupações sobre a saúde das suas plantas.</h5>
 					</div>
 				</div>
 			</div>
-			<div class="parallax"><img src="img/background3.jpeg" alt="Unsplashed background img 3"></div>
-		</div> -->
+			<div class="parallax"><img src="img/quadro/quadrovivo2.jpeg" alt="Unsplashed background img 3"></div>
+		</div>
 
 		<div class="container center">
 			<div class="row">
@@ -147,45 +138,34 @@
 			</div>
 			<div class="row">
 				<!-- DANI -->
-				<div class="col s12 m6 l3">
-					<img src="img/equipe/dani.jpg" class="fota">
-<<<<<<< HEAD
+				<div class="col s12 m6">
+					<img src="img/equipe/dani.jpeg" class="fota">
 					<p><h6 class="nomePlanta-m">Daniele Borba</h6>daniborbavoigt@gmail.com</p>
 					<p>Estudante do Técnico em Informática no IFC - Rio do Sul.</p>
-=======
-					<h6 class="nomePlanta-m">Daniele Borba</h6><p>daniborbavoigt@gmail.com</p>
->>>>>>> parent of 50e7b66... salvando essa versão dessa bosta do krlho
 				</div>
 
 
 				<!-- DAI -->
-				<div class="col s12 m6 l3">
-					<img src="img/equipe/dai.jpg" class="fota">
-<<<<<<< HEAD
+				<div class="col s12 m6">
+					<img src="img/equipe/dai.jpeg" class="fota">
 					<p><h6 class="nomePlanta-m">Daiane Carl</h6>daianecarl@hotmail.com</p>
 					<p>Estudante do Técnico em Informática no IFC - Rio do Sul.</p>
-=======
-					<h6 class="nomePlanta-m">Daiane Carl</h6><p>daianecarl@hotmail.com</p>
->>>>>>> parent of 50e7b66... salvando essa versão dessa bosta do krlho
 				</div>
 
 				<!-- EDUARDO -->
-				<div class="col s12 m6 l3">
-					<img src="img/equipe/eduardo.jpg" class="fota">
-					<h6 class="nomePlanta-m">Eduardo Puhl</h6><p>eduardo.puhl@ifc.edu.br</p>
+				<div class="col s12 m6">
+					<img src="img/equipe/eduardo.png" class="fota">
+					<p><h6 class="nomePlanta-m">Eduardo Puhl</h6>eduardo.puhl@ifc.edu.br</p>
+                    <p>Doutor em Engenharia Elétrica, profesor no IFC - Rio do Sul</p>
 				</div>
 
 
 				<!-- DENISE -->
-				<div class="col s12 m6 l3">
-					<img src="img/equipe/denise.jpg" class="fota">
-<<<<<<< HEAD
+				<div class="col s12 m6">
+					<img src="img/equipe/denise.jpeg" class="fota">
 					<p><h6 class="nomePlanta-m">Denise Fernandes</h6>denise.fernandes@ifc.edu.br</p>
-					<p>Doutora em Fisiologia Vegetal, é professora no IFC - Rio do Sul.</p>
+					<p>Doutora em Fisiologia Vegetal, professora no IFC - Rio do Sul.</p>
 					<br>
-=======
-					<h6 class="nomePlanta-m">Denise Fernandes</h6><p>denise.fernandes@ifc.edu.br</p>
->>>>>>> parent of 50e7b66... salvando essa versão dessa bosta do krlho
 				</div>
 			</div>
 		</div>

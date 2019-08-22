@@ -1,6 +1,6 @@
 <?php
 
-	require('../autoload.php');
+	require('autoload.php');
 
     $planta1 = new Planta('NULL', 'Daniele voigt', 'Dani', 'Chá gostoso');
     $planta2 = new Planta('NULL', 'Dani', 'Dani', 'Chá');
