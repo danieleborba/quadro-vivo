@@ -45,11 +45,22 @@
 			</div>
 		</div>
 
+		<div class="parallax-container valign-wrapper" style="height: 70vh">
+			<div class="section no-pad-bot">
+				<div class="container">
+					<div class="row center">
+						<h5 class="header col s12 light white-text" style="text-shadow: 1.5px 1.5px black; font-size: 2.5rem">Automatizado por microcontroladores</h5>
+					</div>
+				</div>
+			</div>
+			<div class="parallax"><img src="img/microcontroladores.png" alt="Unsplashed background img 3"></div>
+		</div>
+
 		<div class="container">
 			<div class="section">
 
 				<div class="row">
-					<div class="col s12 l8 offset-l2">
+					<div class="col s12 l4">
 						<div class="icon-block">
 							<h2 class="center red-text"><i class="material-icons">wifi</i></h2>
 							<h5 class="center">1</h5>
@@ -58,7 +69,7 @@
 						</div>
 					</div>
 
-					<div class="col s12 l8 offset-l2">
+					<div class="col s12 l4">
 						<div class="icon-block">
 							<h2 class="center red-text"><i class="material-icons">devices</i></h2>
 							<h5 class="center">2</h5>
@@ -67,7 +78,7 @@
 						</div>
 					</div>
 
-					<div class="col s12 l8 offset-l2">
+					<div class="col s12 l4">
 						<div class="icon-block">
 							<h2 class="center red-text"><i class="material-icons">nature_people</i></h2>
 							<h5 class="center">3</h5>
@@ -80,46 +91,7 @@
 			</div>
 		</div>
 
-		</div>
-		</div>
-
 		
-		<div class="container">
-			<div class="section">
-
-				<!--   Icon Section   -->
-				<div class="row">
-					<div class="col s12 m4">
-						<div class="icon-block">
-							<h2 class="center red-text"><i class="material-icons">flash_on</i></h2>
-							<h5 class="center">Automatizado</h5>
-
-							<p class="center">A rega e a iluminação acontecem automaticamente por meio de sensores e microcontroladores.</p>
-						</div>
-					</div>
-
-					<div class="col s12 m4">
-						<div class="icon-block">
-							<h2 class="center red-text"><i class="material-icons">group</i></h2>
-							<h5 class="center">Interativo</h5>
-
-							<p class="center">Receba gráficos e informações sobre a saúde e a utilidade de suas plantas.</p>
-						</div>
-					</div>
-
-					<div class="col s12 m4">
-						<div class="icon-block">
-							<h2 class="center red-text"><i class="material-icons">settings</i></h2>
-							<h5 class="center">Personalizável</h5>
-
-							<p class="center">Escolha a arquitetura que melhor se adequea à sua casa e selecione as plantas que deseja.</p>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
 		<div class="parallax-container valign-wrapper" style="height: 70vh">
 			<div class="section no-pad-bot">
 				<div class="container">

@@ -43,21 +43,21 @@
 	<main>
 		<div class="row">
 			<div class="col l3">
-				<ul id="slide-out" class="sidenav sidenav-fixed black-text center" style="padding-top: 20vh">
+				<ul id="slide-out" class="sidenav sidenav-fixed black-text center" style="padding-top: 25vh">
 					<li><img src="img/mao.svg" width="80rem" alt="logo do Quadro Vivo"></li>
-					<li class="grey lighten-3"><a href="#!">Monitoramento</a></li>
-					<li><a href="#!">Configurações</a></li>
-					<li><a href="#!">Perfil</a></li>
-					<li><a href="#!">Ajuda</a></li>
-					<li><a href="#!">Sair</a></li>
+					<li class="grey lighten-3"><a href="home.php">Monitoramento</a></li>
+					<li><a href="plantas3.php">Plantas</a></li>
+					<li><a href="configuracoes.php">Configurações</a></li>
+					<li><a href="acao.php?acao=logout">Sair</a></li>
 				</ul>
 			</div>
 
 			<div class="col l9 s12 center">
 				<div class="row">
-					<div class="col ls2">
-						<h4 class="green-text text-darken-3">Monitoramento</h4>
-						<div id="curve_chart" style="width: 900px; height: 500px"></div>
+					<div class="col s12" style="padding-right: 3vw">
+						<h4 class="red-text text-darken-1">Monitoramento</h4>
+						<!-- <div id="curve_chart" style="width: 900px; height: 500px"></div> -->
+						<iframe src="https://console.thinger.io/#/dashboard/dash_quadrovivo?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJEYXNoYm9hcmRfZGFzaF9xdWFkcm92aXZvIiwidXNyIjoicXVhZHJvdml2byJ9.VorBzHiPp0J-r2viw9CmJae0Ng8OCbBh3WJuk9M3Ctw" frameborder="0" width="100%" height="100%"></iframe>
 					</div>
 				</div>
 			</div>
