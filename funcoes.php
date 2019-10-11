@@ -3,9 +3,9 @@
 
 	function gerarImagem($tamanho, $estilo) {
 		if ($_SESSION['imagem'] == 'null') {
-			echo '<img class="circle" src="img/usuarios/user.png" style="width: '.$tamanho. '; '.$estilo.'>';
+			return '<img class="circle" src="img/usuarios/user.png" style="width: '.$tamanho. '; '.$estilo.'>';
 		} else {
-			echo '<img class="circle" src="'.$_SESSION['imagem'].'" style="max-width: '.$tamanho. '; min-width: '.$tamanho. '; '.$estilo.'>';
+			return '<img class="circle" src="'.$_SESSION['imagem'].'" style="max-width: '.$tamanho. '; min-width: '.$tamanho. '; '.$estilo.'>';
 		}
 	}
 

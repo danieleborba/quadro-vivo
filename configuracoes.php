@@ -58,14 +58,16 @@
 						<div class="row center">
                             <div class="col s12 l6 offset-l3">
                             	<h4 class="red-text text-darken-1">Configurações</h4>
-                                <?php 
-                                    gerarImagem('15rem', '');
-                                    echo '<br><p><h5>' .$_SESSION['nome']. '</h5>';
-                                    echo $_SESSION['usuario']. '<br>' .$_SESSION['email']. '</p>';
-                                ?>
+								
+									<?php 
+										echo '<p>'. gerarImagem('15rem', 'alt="Imagem de perfil do usuário"') .'</p>';
+									?>
+									<?php 
+										echo '<p><h5>' .$_SESSION['nome']. '</h5>';
+										echo $_SESSION['usuario']. '<br>' .$_SESSION['email']. '</p>';
+									?>
                             </div>
                         </div>
-
                         <div class="col s12 l6 offset-l3">
                             <div class="collection">
                                 <a href="wifi_manager.php" class="collection-item">Configurar conexão wi-fi</a>

@@ -175,6 +175,7 @@
 					if ($this->getSenha() == $dados[0]['senha']) {
 						session_start();
 						$this->setNome($dados[0]['nome']);
+						$this->setUsuario($dados[0]['usuario']);
 						$this->setEmail($dados[0]['email']);
 						$this->setCodigo($dados[0]['codigo']);
 						$this->setImagem($dados[0]['imagem']);
