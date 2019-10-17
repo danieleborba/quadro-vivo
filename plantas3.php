@@ -55,7 +55,7 @@
 			<div class="col l9 s12 center">
 				<div class="row">
                     <div class="col s12 center">
-                        <h4 class="red-text text-darken-1">Plantas</h4>
+                        <h3 class="red-text text-darken-1">Plantas</h3>
                     </div>
                 </div>
                 <div class="row" style="padding-right: 3vw">

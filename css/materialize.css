@@ -4464,7 +4464,6 @@ nav ul a {
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
   font-size: 1rem;
-  color: #fff;
   display: block;
   padding: 0 15px;
   cursor: pointer;
@@ -6904,10 +6903,6 @@ textarea.materialize-textarea {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-}
-
-[type="checkbox"] {
-  /* checkbox aspect */
 }
 
 [type="checkbox"] + span:not(.lever) {

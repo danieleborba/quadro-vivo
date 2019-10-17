@@ -32,18 +32,24 @@
 		  }
 		}
 
+		.collection {
+			width: 60%;
+			text-align: center;
+		}
+
+		table {
+			border: none;			
+		}
 	</style>
 </head>
 <body>
 
-	<header>
-		<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-	</header>
+		
 
 	<main>
 		<div class="row">
 			<div class="col l3">
-				<ul id="slide-out" class="sidenav sidenav-fixed black-text center" style="padding-top: 25vh">
+				<ul id="slide-out" class="sidenav sidenav-fixed black-text center" style="padding-top: 20vh">
 					<li><img src="img/mao.svg" width="80rem" alt="logo do Quadro Vivo"></li>
 					<li><a href="home.php">Monitoramento</a></li>
 					<li><a href="plantas3.php">Plantas</a></li>
@@ -52,30 +58,25 @@
 				</ul>
 			</div>
 
-			<div class="col l9 s12 center">
-				<div class="row">
-					<div class="col s12" style="padding-right: 3vw">
-						<div class="row center">
-                            <div class="col s12 l6 offset-l3">
-                            	<h4 class="red-text text-darken-1">Configurações</h4>
-								
-									<?php 
-										echo '<p>'. gerarImagem('15rem', 'alt="Imagem de perfil do usuário"') .'</p>';
-									?>
-									<?php 
-										echo '<p><h5>' .$_SESSION['nome']. '</h5>';
-										echo $_SESSION['usuario']. '<br>' .$_SESSION['email']. '</p>';
-									?>
-                            </div>
-                        </div>
-                        <div class="col s12 l6 offset-l3">
-                            <div class="collection">
-                                <a href="wifi_manager.php" class="collection-item">Configurar conexão wi-fi</a>
-                                <a href="#!" class="collection-item">Alterar plantas</a>
-                                <a href="#!" class="collection-item">Alterar senha</a>
-                                <a href="#alterarImagem" class="collection-item modal-trigger">Alterar imagem</a>
-                            </div>
-                        </div>
+			<div class="col l8 s12 center" style="margin-top: 5vh">
+				<h3 class="red-text text-darken-1">Configurações</h4><br>
+				<div class="row center">
+                    <div class="col s12">
+						<?php 
+							echo '<p>'. gerarImagem('15rem', 'alt="Imagem de perfil do usuário"') .'</p>';
+						?>
+						<?php 
+							echo '<p><h5>' .$_SESSION['nome']. '</h5>';
+							echo $_SESSION['usuario']. '<br>' .$_SESSION['email']. '</p>';
+						?>
+					
+						<div class="collection">
+							<a href="wifi_manager.php" class="collection-item">Configurar conexão wi-fi</a>
+							<a href="#!" class="collection-item">Alterar plantas</a>
+							<a href="#!" class="collection-item">Alterar senha</a>
+							<a href="#!" class="collection-item">Alterar dados</a>
+							<a href="#alterarImagem" class="collection-item modal-trigger">Alterar imagem</a>
+						</div>
                     </div>
 				</div>
 			</div>

@@ -45,16 +45,6 @@
 			</div>
 		</div>
 
-		<div class="parallax-container valign-wrapper" style="height: 70vh">
-			<div class="section no-pad-bot">
-				<div class="container">
-					<div class="row center">
-						<h5 class="header col s12 light white-text" style="text-shadow: 1.5px 1.5px black; font-size: 2.5rem">Automatizado por microcontroladores</h5>
-					</div>
-				</div>
-			</div>
-			<div class="parallax"><img src="img/microcontroladores.png" alt="Unsplashed background img 3"></div>
-		</div>
 
 		<div class="container">
 			<div class="section">

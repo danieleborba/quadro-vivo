@@ -41,7 +41,7 @@
 							<a href="#'.$plantas[$i]['codigo'].'" class="modal-trigger">
 								<div class="card hoverable">
 									<div class="card-image waves-effect waves-block waves-light">
-										<img class="activator fotos" src="img/plantas/'.$plantas[$i]['nome'].'.jpeg">
+										<img class="activator fotos" src="img/plantas/'.$plantas[$i]['nome'].'.jpeg" style="height: 40vh">
 									</div>
 									<div class="card-content">
 										<span class="card-title activator grey-text text-darken-4">'.$plantas[$i]['nome'].'<i class="material-icons right">more_vert</i></span>
