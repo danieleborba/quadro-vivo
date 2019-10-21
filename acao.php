@@ -20,6 +20,9 @@
 		case 'logoutAdm':
 			logoutAdm();
 			break;
+		case 'escolherPlantas':
+			escolherPlantas();
+			break;
 		case 'adicionarPlanta':
 			adicionarPlanta();
 			break;
@@ -39,7 +42,7 @@
 	// USUÁRIO
 	function cadastrar() {
 		$usuario = new Usuario('');
-		$usuario->cadastrar_usuario($_POST['codigo'], $_POST['usuario'], $_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['telefone'], $_POST['dataNascimento'], $_POST['codigoCompra'], $_POST['fusoHorario']);
+		$usuario->cadastrar_usuario($_POST['usuario'], $_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['codigoCompra']);
 	}
 	function login() {
 		$usuario = new Usuario('');
@@ -52,8 +55,13 @@
 
 	// PLANTAS
 	function adicionarPlanta() {
-		$crud = new Crud();
-		$crud->adicionarPlanta('NULL', $_POST["especie"], $_POST["nome"], $_POST["descricao"]);
+		$quadro = new QuadroVivo;
+		$quadro->adicionarPlanta('NULL', $_POST["especie"], $_POST["nome"], $_POST["descricao"], $_POST["tipo"]);
+	}
+
+	function escolherPlantas() {
+		$usuario = new Usuario(1);
+		$usuario->escolherPlantas($_POST["p1"], $_POST["p2"], $_POST["p3"], $_POST["p4"], $_POST["p5"], $_POST["p6"]);
 	}
 
 ?>

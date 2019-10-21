@@ -9,6 +9,42 @@
 		}
 	}
 
+	function geraSelectPlantas($default, $tabela, $selecao, $value, $descricao, $select, $tipo) {
+		$sql = 'select * from ' .$tabela. ' where tipo = '.$tipo.' order by ' .$descricao;
+		echo '<select class="icons" name="'.$select.'" id="'.$select.'">';
+		echo '<option value="0" disabled>'.$default.'</option>';
+		$crud = new Crud;
+		$row = $crud->select($sql);
+		$cont = 0;
+		while ($cont < count($row)) {
+			$birobiro = "";
+			if ($row[$cont][$value] == $selecao) {
+				$birobiro = ' selected';
+			}
+			echo '<option value="'.$row[$cont][$value].'" data-icon="img/plantas/'.$row[$cont][$descricao].'.svg" ' .$birobiro. '>' .$row[$cont][$descricao]. '</option>';
+			$cont++;
+		}
+		echo '</select>';
+	}
+
+	function geraSelect($default, $tabela, $selecao, $value, $descricao, $select) {
+		$sql = 'select * from ' .$tabela. ' order by ' .$descricao;
+		echo '<select class="icons" name="'.$select.'" id="'.$select.'">';
+		echo '<option value="0" disabled>'.$default.'</option>';
+		$crud = new Crud;
+		$row = $crud->select($sql);
+		$cont = 0;
+		while ($cont < count($row)) {
+			$birobiro = "";
+			if ($row[$cont][$value] == $selecao) {
+				$birobiro = ' selected';
+			}
+			echo '<option value="'.$row[$cont][$value].'" ' .$birobiro. '>' .$row[$cont][$descricao]. '</option>';
+			$cont++;
+		}
+		echo '</select>';
+	}
+
 	function gerarNavIndex() {
 		echo '<nav class="white" role="navigation">
     <div class="nav-wrapper">
@@ -188,7 +224,8 @@
 
 	function gerarCSS() {
 		echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-			  <link rel="shortcut icon" type="imagem/x-icon" href="img/mao.png">
+				<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap&subset=latin-ext" rel="stylesheet"> 
+			  <link rel="shortcut icon" type="imagem/x-icon" href="img/mao.svg">
 			  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
 			  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 			  <link href="css/material-icons.css" rel="stylesheet">

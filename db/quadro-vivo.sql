@@ -43,13 +43,12 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 	`nome` VARCHAR(100) NOT NULL,
 	`email` VARCHAR(45) NOT NULL UNIQUE,
 	`senha` VARCHAR(512) NOT NULL,
-	`telefone` VARCHAR(13) NULL UNIQUE,
-	`dataNascimento` DATE NULL,
 	`codigoCompra` INT NOT NULL UNIQUE,
 	`imagem` VARCHAR(45) NOT NULL,
 	`fusoHorario` INT(2) NOT NULL,
-		FOREIGN KEY (`fusoHorario`)
-		REFERENCES `fusoHorario` (`codigo`)
+    `valida` INT(1) NOT NULL,
+	FOREIGN KEY (`f	usoHorario`)
+	REFERENCES `fusoHorario` (`codigo`)
 );
 
 -- -----------------------------------------------------
@@ -137,7 +136,6 @@ CREATE TABLE IF NOT EXISTS `quadro_has_planta` (
 	FOREIGN KEY (`planta`)
 	REFERENCES `planta` (`codigo`)
 );
-
 -- -----------------------------------------------------
 -- `quadro_has_usuario`
 -- -----------------------------------------------------
@@ -164,19 +162,6 @@ CREATE TABLE IF NOT EXISTS `quadro_has_wifi` (
 	REFERENCES `wifi` (`codigo`)
 );
 
--- -----------------------------------------------------
--- `usuario_has_endereco`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `usuario_has_endereco` (
-	`usuario` INT NOT NULL,
-	`endereco` INT NOT NULL,
-	PRIMARY KEY (`usuario`, `endereco`),
-	FOREIGN KEY (`usuario`)
-	REFERENCES `usuario` (`codigo`),
-	FOREIGN KEY (`endereco`)
-	REFERENCES `endereco` (`codigo`)
-);
-
 
 CREATE VIEW quadro_vivo
 AS SELECT q.codigo AS quadro, u.usuario AS usuario, w.wifi AS wifi
@@ -185,6 +170,13 @@ FROM quadro q
 	ON q.codigo = w.quadro
 		INNER JOIN quadro_has_usuario u
 		ON q.codigo = u.quadro;	
+
+CREATE VIEW planta_tipo 
+AS SELECT p. codigo as codigo_planta, p.nome AS nome, t.codigo as tipo, t.descricao as tipoPlanta
+FROM planta p, tipoPlanta t, planta_has_tipoPlanta tp
+WHERE tp.planta = p.codigo
+AND tp.tipoPlanta = t.codigo
+GROUP BY p.codigo;
 
 
 CREATE VIEW quadro_vivo_nomes
@@ -215,4 +207,7 @@ FROM usuario u
 	INNER JOIN usuario_has_endereco uhe
 	ON uhe.usuario = u.codigo
 		INNER JOIN endereco e
-		ON uhe.endereco = e.codigo
+		ON uhe.endereco = e.codigo;
+        
+SELECT *
+FROM adm;

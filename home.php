@@ -46,7 +46,7 @@
 				<ul id="slide-out" class="sidenav sidenav-fixed black-text center" style="padding-top: 25vh">
 					<li><img src="img/mao.svg" width="80rem" alt="logo do Quadro Vivo"></li>
 					<li class="grey lighten-3"><a href="home.php">Monitoramento</a></li>
-					<li><a href="plantas3.php">Plantas</a></li>
+					<li><a href="plantas.php">Plantas</a></li>
 					<li><a href="configuracoes.php">Configurações</a></li>
 					<li><a href="acao.php?acao=logout">Sair</a></li>
 				</ul>

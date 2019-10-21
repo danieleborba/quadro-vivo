@@ -35,7 +35,7 @@
                 $cod = $crud->select('select max(codigo) from planta');
                 $this->setCodigo($cod[0][0]);
             }
-		}
+        }
 
         // MOSTRAR
         public function __toString() {

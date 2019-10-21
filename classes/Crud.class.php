@@ -110,7 +110,6 @@
 				}
 				$sql .= ")";
 				$stmt = $this->geraStmt($sql, $vetor, $campos);
-				
 				$stmt->execute();
 				return true;
 			} catch (PDOException $e) {
@@ -189,6 +188,11 @@
 			} catch (PDOException $e) {
 				return 'Error: ' . $e->getMessage();
 			}
+		}
+
+		public function insert($sql) {
+			$this->conexao();
+			$this->pdo->query($sql);
 		}
 
 		// Não sei

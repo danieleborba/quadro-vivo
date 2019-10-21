@@ -6,12 +6,11 @@
 		private $usuario,
 				$email,
 				$dataNascimento, 
-				$telefone, 
 				$fusoHorario, 
 				$imagem, 
 				$codigoCompra, 
-				$endereco, 
-				$wifi;
+				$wifi,
+				$quadro;
 
 		// USUÁRIO
 		function setUsuario($usuario) {
@@ -21,6 +20,15 @@
 		function getUsuario() {
 			return $this->usuario;
 		}
+
+		// QUADRO
+		function setQuadro($quadro) {
+			$this->quadro = $quadro;
+		}
+
+		function getQuadro() {
+			return $this->quadro;
+		}
 	
 		// EMAIL
 		function setEmail($email) {
@@ -29,24 +37,6 @@
 
 		function getEmail() {
 			return $this->email;
-		}
-
-		// DATA DE NASCIMENTO
-		function setDataNascimento($dataNascimento) {
-			$this->dataNascimento = $dataNascimento;
-		}
-
-		function getDataNascimento() {
-			return $this->dataNascimento;
-		}
-
-		// TELEFONE
-		function setTelefone($telefone) {
-			$this->telefone = $telefone;
-		}
-
-		function getTelefone() {
-			return $this->telefone;
 		}
 
 		// FUSO HORÁRIO
@@ -76,16 +66,6 @@
 			return $this->codigoCompra;
 		}
 
-		// ENDEREÇO
-		function setEndereco($endereco) {
-			if ($endereco instanceof Endereco)
-				$this->endereco = $endereco;
-		}
-
-		function getEndereco() {
-			return $this->endereco;
-		}
-
 		// WIFI
 		function setWifi($wifi) {
 			if ($wifi instanceof Wifi)
@@ -94,12 +74,6 @@
 
 		function getWifi() {
 			return $this->wifi;
-		}
-
-		function getPlanta() {
-			for ($i=0; $i < count($this->planta); $i++) { 
-				echo $this->planta[$i];
-			}
 		}
 
 		// TUDO
@@ -112,54 +86,54 @@
 					$this->setNome($dados[0]['nome']);
 					$this->setSenha($dados[0]['senha']);
 					$this->setUsuario($dados[0]['usuario']);
-					$this->setDataNascimento($dados[0]['dataNascimento']);
-					$this->setTelefone($dados[0]['telefone']);
-					$this->setFusoHorario($dados[0]['fusoHorario']);
 					$this->setImagem($dados[0]['imagem']);
 					$this->setCodigoCompra($dados[0]['codigoCompra']);
-					// endereço e wifi
 				}
 			}
 		}
 		
 		// INSERIR NO BD
-		function cadastrar_usuario($codigo, $usuario, $nome, $email, $senha, $telefone, $dataNascimento, $codigoCompra, $fusoHorario) {
-			$crud = new Crud;
-			$crud->setTabela('usuario');
+		function cadastrar_usuario($usuario, $nome, $email, $senha, $codigoCompra) {
 
 			// Setando os parâmetros como atributos do objeto
-			$this->setCodigo($codigo);
-			$this->setUsuario($usuario);
-			$this->setNome($nome);
-			$this->setEmail($email);
-			$this->setSenha($senha);
-			$this->setTelefone($telefone);
-			$this->setDataNascimento($dataNascimento);
-			$this->setCodigoCompra($codigoCompra);
-			$this->setImagem('img/usuarios/fazendeiro.png');
-			$this->setFusoHorario($fusoHorario);
+			// $this->setUsuario($usuario);
+			// $this->setNome($nome);
+			// $this->setEmail($email);
+			// $this->setSenha($senha);
+			// $this->setCodigoCompra($codigoCompra);
+			// $this->setImagem('img/usuarios/fazendeiro.png');
 
-			// Inserindo no BD
-			if($crud->inserir([
-				$this->getCodigo(),
-				$this->getUsuario(),
-				$this->getNome(),
-				$this->getEmail(),
-				$this->getSenha(),
-				$this->getTelefone(),
-				$this->getDataNascimento(),
-				$this->getCodigoCompra(),
-				$this->getImagem(),
-				'',
-				$this->getFusoHorario()
-			])) {
-				// Atualizando o código do usuário no objeto
-				$codigoUsuario = $crud->select('select max(codigo) from usuario');
-				$this->setCodigo($codigoUsuario);
-				header('location:login.php');
-			} else {
-				echo 'Erro!';
-			}
+			// $crud = new Crud;
+			// $crud->setTabela('usuario');
+
+			// // Inserindo no BD
+			// if(
+				// $crud->inserir([
+				// echo $this->getUsuario();
+				// echo $this->getNome();
+				// echo $this->getEmail();
+				// echo $this->getSenha();
+				// echo $this->getCodigoCompra();
+				// echo $this->getImagem();
+			// 	'10',
+			// 	0
+			// ])) 
+			// {
+			// 	echo 'a';
+			// 	// Atualizando o código do usuário no objeto
+			// 	$codigoUsuario = $crud->select('select max(codigo) from usuario');
+			// 	$this->setCodigo($codigoUsuario);
+
+			// 	// erro aqui
+			// 	$crud->setTabela('quadro');
+			// 	$this->setQuadro($crud->select('select max(codigo) from quadro'));
+			// 	if ($crud->select('insert into quadro_has_usuario values ('.$this->getQuadro().', '.$this->getCodigo().')')) {
+			// 		// header('location:login.php');
+				// }
+				
+			// } else {
+			// 	echo 'Erro!';
+			// }
 
 
 		}
@@ -184,7 +158,21 @@
 						$_SESSION['codigo'] = $this->getCodigo();
 						$_SESSION['email'] = $this->getEmail();
 						$_SESSION['imagem'] = $this->getImagem();
-						header('location:home.php');
+
+						// $crud->setTabela('quadro_has_usuario');
+						// $codigo_quadro = $crud->select('select quadro from quadro_has_usuario where usuario = ' .$this->getCodigo());
+						// $this->setQuadro($codigo_quadro[0][0]);
+
+						$crud->insert('insert into quadro values (null, 1)');
+						$quadro = $crud->select('select max(codigo) from quadro');
+						$crud->insert('insert into quadro_has_usuario values ('.$quadro[0][0].', '.$this->getCodigo().')');
+
+
+						if ($dados[0]['valida'] == 0) {
+							header('location:inicio.php');
+						} elseif (condition) {
+							header('location:home.php');
+						}
 					}
 				}
 			} else {
@@ -222,6 +210,23 @@
 
 		function configurar_wifi() {
 			
+		}
+
+		function escolherPlantas($p1, $p2, $p3, $p4, $p5, $p6) {
+			$crud = new Crud;
+			$dados = $crud->select('select quadro from quadro_has_usuario where usuario = ' .$this->getCodigo());
+			$quadro = $dados[0][0];
+			$this->setQuadro($quadro);
+			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$p1.')');
+			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$p2.')');
+			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$p3.')');
+			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$p4.')');
+			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$p5.')');
+			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$p6.')');
+
+			$crud->insert('update usuario set valida = 1 where codigo = ' .$this->getCodigo());
+
+			header('location:plantas.php');
 		}
 		
 	}

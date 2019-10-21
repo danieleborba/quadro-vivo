@@ -1,0 +1,5 @@
+pessoa faz o cadastro
+é criado o usuário e um quadro no bd
+ele salva o usuario no quadro
+ai ela escolhe as plantas
+ele salva as plantas no quadro

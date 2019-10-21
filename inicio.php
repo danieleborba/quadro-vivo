@@ -77,79 +77,58 @@
                     <li><h4>6</h4></li>
                 </ul>
             </div>
+            <form action="acao.php" method="post">
             <div class="col s11 l4">
                 <br>
                 <ul>
                     <li class="nplantas">
                         <div class="input-field">
-                            <select class="icons">
-                                <option value="" disabled selected>Escolha uma hortaliça:</option>
-                                <option value="" data-icon="img/plantas/alface.svg" class="left">Alface</option>
-                                <option value="" data-icon="img/plantas/tomilho.svg" class="left">Tomilho</option>
-                                <option value="" data-icon="img/plantas/alfaceroxo.svg" class="left">Alface roxa</option>
-                                <option value="" data-icon="img/plantas/hortela.svg" class="left">Hortelã</option>
-                                <option value="" data-icon="img/plantas/rucula.svg" class="left">Rúcula</option>
-                                <option value="" data-icon="img/plantas/trevo.svg" class="left">Trevo de 4 folhas</option>
-                            </select>
+                            <?php
+                                geraSelectPlantas('Escolha uma hortaliça:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p1', 3);
+                            ?>
                         </div>
                     </li>
                     <li class="nplantas">
-                    <div class="input-field">
-                            <select class="icons">
-                            <option value="" disabled selected>Escolha outra hortaliça:</option>
-                                <option value="" data-icon="img/plantas/alface.svg" class="left">Alface</option>
-                                <option value="" data-icon="img/plantas/tomilho.svg" class="left">Tomilho</option>
-                                <option value="" data-icon="img/plantas/alfaceroxo.svg" class="left">Alface roxa</option>
-                                <option value="" data-icon="img/plantas/hortela.svg" class="left">Hortelã</option>
-                                <option value="" data-icon="img/plantas/rucula.svg" class="left">Rúcula</option>
-                                <option value="" data-icon="img/plantas/trevo.svg" class="left">Trevo de 4 folhas</option>
-                            </select>
+                        <div class="input-field">
+                            <?php
+                                geraSelectPlantas('Escolha uma hortaliça:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p2', 3);
+                            ?>
                         </div>
                     </li>
                     <li class="nplantas">
-                    <div class="input-field">
-                            <select class="icons">
-                                <option value="" disabled selected>Escolha um tempero ou chá:</option>
-                                <option value="" data-icon="img/plantas/Alface Mimosa.jpeg" class="left">example 1</option>
-                                <option value="" data-icon="img/plantas/Alface Mimosa.jpeg" class="left">example 2</option>
-                                <option value="" data-icon="img/plantas/Alface Mimosa.jpeg" class="left">example 3</option>
-                            </select>
+                        <div class="input-field">
+                            <?php
+                                geraSelectPlantas('Escolha uma hortaliça:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p3', '1 or tipo = 2');
+                            ?>
                         </div>
                     </li>
                     <li class="nplantas">
-                    <div class="input-field">
-                            <select class="icons">
-                                <option value="" disabled selected>Escolha outro tempero ou chá:</option>
-                                <option value="" data-icon="img/plantas/Alface Mimosa.jpeg" class="left">example 1</option>
-                                <option value="" data-icon="img/plantas/Alface Mimosa.jpeg" class="left">example 2</option>
-                                <option value="" data-icon="img/plantas/Alface Mimosa.jpeg" class="left">example 3</option>
-                            </select>
+                        <div class="input-field">
+                            <?php
+                                geraSelectPlantas('Escolha uma hortaliça:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p4', '1 or tipo = 2');
+                            ?>
                         </div>
                     </li>
                     <li class="nplantas">
-                    <div class="input-field">
-                            <select class="icons">
-                                <option value="" disabled selected>Escolha uma planta decorativa:</option>
-                                <option value="" data-icon="img/plantas/Alface Mimosa.jpeg" class="left">example 1</option>
-                                <option value="" data-icon="img/plantas/Alface Mimosa.jpeg" class="left">example 2</option>
-                                <option value="" data-icon="img/plantas/Alface Mimosa.jpeg" class="left">example 3</option>
-                            </select>
+                        <div class="input-field">
+                            <?php
+                                geraSelectPlantas('Escolha uma hortaliça:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p5', '4 or tipo = 5');
+                            ?>
                         </div>
                     </li>
                     <li class="nplantas">
-                    <div class="input-field">
-                            <select class="icons">
-                                <option value="" disabled selected>Escolha outra planta decorativa:</option>
-                                <option value="" data-icon="img/plantas/Alface Mimosa.jpeg" class="left">example 1</option>
-                                <option value="" data-icon="img/plantas/Alface Mimosa.jpeg" class="left">example 2</option>
-                                <option value="" data-icon="img/plantas/Alface Mimosa.jpeg" class="left">example 3</option>
-                            </select>
+                        <div class="input-field">
+                            <?php
+                                geraSelectPlantas('Escolha uma hortaliça:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p6', '4 or tipo = 5');
+                            ?>
                         </div>
                     </li>
                 </ul>
                 <br>
+                <input type="hidden" name="acao" value="escolherPlantas">
                 <button class="waves-effect waves-light btn red white-text" type="submit" name="continuar">continuar<i class="material-icons right">send</i></button>
             </div>
+            </form>
         </div>
 	</main>
 

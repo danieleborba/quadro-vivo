@@ -63,9 +63,16 @@
 		}
 
 		// ADICIONAR PLANTAS
-		function adicionarPlanta($codigo, $especie, $nome, $descricao) {
-			$this->setTabela('planta');
-			$this->inserir([$codigo, $especie, $nome, $descricao]);
+		function adicionarPlanta($codigo, $especie, $nome, $descricao, $tipo) {
+			$crud = new Crud;
+			$crud->setTabela('planta');
+			if($crud->inserir(['null', $especie, $nome, $descricao])) {
+				$crud->setTabela('planta_has_tipoPlanta');
+				$codigo_planta = $crud->select('select max(codigo) from planta');
+				if($crud->inserir([$codigo_planta[0][0], $tipo])) {
+					header('location:adm.php');
+				}
+			}
 		}
 	}
 

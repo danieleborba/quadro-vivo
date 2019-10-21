@@ -35,8 +35,7 @@
 			</div>
 			<div class="row">
 				<?php
-					$crud = new Crud;
-					$crud->mostrarPlantasAdm();
+					$adm = new Adm($_SESSION['codigo'], $_SESSION['usuario'], '', 'mostrarPlantasAdm');	
 				?>
 			</div>
 		</div>

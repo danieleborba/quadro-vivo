@@ -11,8 +11,15 @@
 	<style type="text/css">		
 		@media only screen and (max-width : 1080px) {
 		  .pagina {
+			background-image: url(img/quadro/quadrovivomobile.jpeg);
 		    background-size: cover;
+			background-position: center;
+			margin-bottom: -20px;
 		  }
+		}
+
+		main {
+			margin-bottom: -20px;
 		}
 	</style>
 
@@ -42,7 +49,7 @@
 						<br><br>
 					</div>
 				</div>
-				<div class="parallax hide-on-small-only"><img src="img/quadro/quadrovivo2.jpeg" alt="Unsplashed background img 1" style="width: 100vw"></div>
+				<div class="parallax hide-on-small-only"><img src="img/quadro/quadrovivo2.jpeg" alt="Unsplashed background img 1" style="width: 100vw; "></div>
 			</div>
 		</div>
 
