@@ -16,9 +16,11 @@ insert into usuario values (null, 'dani2', 'dani', 'dani2@dani.com', 'b123e9e19d
 
 drop trigger criar_quadro_usuario;
 
-
+update usuario set valida = 0 where codigo =1;
 select * from quadro_has_planta;
 
 insert into quadro_has_usuario values (8,1);
+
+delete from quadro_has_planta where quadro = 13;
 
 INSERT INTO tipoQuadro(descricao) VALUES ('Enorme');
