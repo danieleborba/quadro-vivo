@@ -11,7 +11,6 @@
 	<style type="text/css">		
 		@media only screen and (max-width : 1080px) {
 		  .pagina {
-			background-image: url(img/quadro/quadrovivomobile.jpeg);
 		    background-size: cover;
 			background-position: center;
 			margin-bottom: -20px;
@@ -38,18 +37,14 @@
 
 	<main>
 		<div class="pagina" style="min-height: 95vh;">
-			<div id="index-banner" class="parallax-container">
-				<div class="section no-pad-bot white-text margem__mobile--titulo">
-					<div class="container-1">
-						<br><br>
-						<div class="row center" style="margin-top: 10vh">
-							<h1 style="text-shadow: 2px 2px black; margin-bottom: 0; font-size: 7rem" class="white-text"><br>Quadro Vivo</h1>
-							<h3 class="light white-text" style="margin-bottom: 3rem; font-family: 'Carlito'; font-weight: 500; text-shadow: 2px 2px black;">Um jardim vertical automatizado</h3>
-						</div>
-						<br><br>
-					</div>
+			<div class="row center">
+				<div class="col s6">
+					<img src="img/humaaans/1.png" alt="Pessoas ao redor de uma planta">
 				</div>
-				<div class="parallax hide-on-small-only"><img src="img/quadro/quadrovivo2.jpeg" alt="Unsplashed background img 1" style="width: 100vw; "></div>
+				<div class="col s6 left-align">
+					<h1 class="red-text" style="font-size: 7rem"><br>Quadro Vivo</h1>
+					<h4 class="grey-text text-darken-2" style="font-family: 'Carlito'; font-weight: 500">Um jardim vertical automatizado</h4>
+				</div>
 			</div>
 		</div>
 

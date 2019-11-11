@@ -169,23 +169,6 @@
 			header('location:login.php');
 		}
 
-		function escolherPlantas($plantas) {
-			$crud = new Crud;
-			$dados = $crud->select('select quadro from quadro_has_usuario where usuario = ' .$this->getCodigo());
-			$quadro = $dados[0][0];
-			$this->setQuadro($quadro);
-			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$plantas[0].')');
-			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$plantas[1].')');
-			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$plantas[2].')');
-			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$plantas[3].')');
-			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$plantas[4].')');
-			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$plantas[5].')');
-
-			$crud->insert('update usuario set valida = 1 where codigo = ' .$this->getCodigo());
-
-			header('location:plantas.php');
-		}
-		
 	}
 
 ?>
