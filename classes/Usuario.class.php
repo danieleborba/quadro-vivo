@@ -96,45 +96,33 @@
 		function cadastrar_usuario($usuario, $nome, $email, $senha, $codigoCompra) {
 
 			// Setando os parâmetros como atributos do objeto
-			// $this->setUsuario($usuario);
-			// $this->setNome($nome);
-			// $this->setEmail($email);
-			// $this->setSenha($senha);
-			// $this->setCodigoCompra($codigoCompra);
-			// $this->setImagem('img/usuarios/fazendeiro.png');
+			$this->setUsuario($usuario);
+			$this->setNome($nome);
+			$this->setEmail($email);
+			$this->setSenha($senha);
+			$this->setCodigoCompra($codigoCompra);
+			$this->setImagem('img/usuarios/fazendeiro.png');
 
-			// $crud = new Crud;
-			// $crud->setTabela('usuario');
+			$crud = new Crud;
+			$crud->setTabela('usuario');
 
-			// // Inserindo no BD
-			// if(
-				// $crud->inserir([
-				// echo $this->getUsuario();
-				// echo $this->getNome();
-				// echo $this->getEmail();
-				// echo $this->getSenha();
-				// echo $this->getCodigoCompra();
-				// echo $this->getImagem();
-			// 	'10',
-			// 	0
-			// ])) 
-			// {
-			// 	echo 'a';
-			// 	// Atualizando o código do usuário no objeto
-			// 	$codigoUsuario = $crud->select('select max(codigo) from usuario');
-			// 	$this->setCodigo($codigoUsuario);
+			echo $this->getUsuario().'", "'.$this->getNome().'", "'.$this->getEmail().'", "'.	$this->getSenha().'", '.$this->getCodigoCompra().', "'.$this->getImagem();
 
-			// 	// erro aqui
-			// 	$crud->setTabela('quadro');
-			// 	$this->setQuadro($crud->select('select max(codigo) from quadro'));
-			// 	if ($crud->select('insert into quadro_has_usuario values ('.$this->getQuadro().', '.$this->getCodigo().')')) {
-			// 		// header('location:login.php');
-				// }
+			// Inserindo no BD
+			$crud->setTabela('usuario');
+			if($crud->insert('INSERT INTO usuario VALUES (null, "'.$this->getUsuario().'", "'.$this->getNome().'", "'.$this->getEmail().'", "'.	$this->getSenha().'", '.$this->getCodigoCompra().', "'.$this->getImagem().'", 10, 0')) {
+				// Atualizando o código do usuário no objeto
+				$codigoUsuario = $crud->select('select max(codigo) from usuario');
+				$this->setCodigo($codigoUsuario);
+
+				$quadro = $crud->SELECT('select max(codigo) from quadro');
 				
-			// } else {
-			// 	echo 'Erro!';
-			// }
-
+				$crud->setTabela('quadro_has_usuario');
+				$crud->inserir([$quadro[0][0], $this->getCodigo()]);
+				header('location:login.php');
+			} else {
+				echo 'a';
+			}
 
 		}
 
@@ -159,18 +147,13 @@
 						$_SESSION['email'] = $this->getEmail();
 						$_SESSION['imagem'] = $this->getImagem();
 
-						// $crud->setTabela('quadro_has_usuario');
-						// $codigo_quadro = $crud->select('select quadro from quadro_has_usuario where usuario = ' .$this->getCodigo());
-						// $this->setQuadro($codigo_quadro[0][0]);
-
-						$crud->insert('insert into quadro values (null, 1)');
-						$quadro = $crud->select('select max(codigo) from quadro');
-						$crud->insert('insert into quadro_has_usuario values ('.$quadro[0][0].', '.$this->getCodigo().')');
-
-
 						if ($dados[0]['valida'] == 0) {
+							$crud->setTabela('quadro');
+							$crud->insert('insert into quadro values (null, 1)');
+							$quadro = $crud->select('select max(codigo) from quadro');
+							$crud->insert('insert into quadro_has_usuario values ('.$quadro[0][0].', '.$dados[0]['codigo'].')');
 							header('location:inicio.php');
-						} elseif (condition) {
+						} elseif ($dados[0]['valida'] == 1) {
 							header('location:home.php');
 						}
 					}
@@ -186,43 +169,17 @@
 			header('location:login.php');
 		}
 
-		function alterar_imagem() {
-			
-		}
-
-		function alterar_dados() {
-			$banco = new banco;
-			$banco->setTabela('usuario');
-			$banco->update([$codigo, $matricula, $nome, $dataNascimento, $usuario, $senha, $img]);
-			if ($banco->update([$codigo, $matricula, $nome, $dataNascimento, $usuario, $senha, $img])) {
-				$_SESSION['usuario'] = $usuario;
-				$_SESSION['nome'] = $nome;
-				$_SESSION['dataNascimento'] = $dataNascimento;
-				header('location:painel-de-controle-'.$_SESSION['tipo_usuario'].'.php');
-			} else {
-				echo 'Erro!';
-			}
-		}
-
-		function alterar_plantas() {
-			
-		}
-
-		function configurar_wifi() {
-			
-		}
-
-		function escolherPlantas($p1, $p2, $p3, $p4, $p5, $p6) {
+		function escolherPlantas($plantas) {
 			$crud = new Crud;
 			$dados = $crud->select('select quadro from quadro_has_usuario where usuario = ' .$this->getCodigo());
 			$quadro = $dados[0][0];
 			$this->setQuadro($quadro);
-			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$p1.')');
-			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$p2.')');
-			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$p3.')');
-			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$p4.')');
-			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$p5.')');
-			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$p6.')');
+			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$plantas[0].')');
+			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$plantas[1].')');
+			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$plantas[2].')');
+			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$plantas[3].')');
+			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$plantas[4].')');
+			$crud->insert('insert into quadro_has_planta values (' .$this->getQuadro(). ', '.$plantas[5].')');
 
 			$crud->insert('update usuario set valida = 1 where codigo = ' .$this->getCodigo());
 

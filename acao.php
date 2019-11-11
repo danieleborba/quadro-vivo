@@ -61,7 +61,7 @@
 
 	function escolherPlantas() {
 		$usuario = new Usuario(1);
-		$usuario->escolherPlantas($_POST["p1"], $_POST["p2"], $_POST["p3"], $_POST["p4"], $_POST["p5"], $_POST["p6"]);
+		$usuario->escolherPlantas([$_POST["p1"], $_POST["p2"], $_POST["p3"], $_POST["p4"], $_POST["p5"], $_POST["p6"]]);
 	}
 
 ?>

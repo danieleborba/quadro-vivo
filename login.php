@@ -36,17 +36,15 @@
 				<div class="row" style="min-height: 100%">
 					<h3 class="red-text">Login</h3>
 					<div class="input-field col s12 m6 offset-m3">
-						<i class="material-icons prefix">account_circle</i>
 						<input id="icon_prefix" name="usuario" type="text" class="validate">
 						<label for="icon_prefix">User</label>
 					</div>
 					<div class="input-field col s12 m6 offset-m3">
-						<i class="material-icons prefix">lock</i>
 						<input id="icon_prefix" name="senha" type="password" class="validate">
 						<label for="icon_prefix">Senha</label>
 					</div>
 					<div class="input-field col s12 m6 offset-m3">
-						<button class="waves-effect waves-light btn red white-text" type="submit" name="entrar">entrar<i class="material-icons right">send</i></button>
+						<button class="waves-effect waves-light btn red white-text" type="submit" name="entrar">entrar</button>
 						<input type="hidden" name="acao" value="login">
 					</div>
 					<div class="col s12 m6 offset-m3">

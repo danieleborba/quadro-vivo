@@ -34,14 +34,14 @@
 										    ON qp.planta = p.codigo 
 												INNER JOIN quadro_vivo qv
 												ON qv.quadro = qp.quadro
-										WHERE qv.usuario = '" .$usuario. "'");
+										WHERE qv.usuario = " .$usuario);
 			if (is_countable($plantas)) {
 				for ($i=0; $i < count($plantas); $i++) { 
 					echo '<div class="col s12 m6 l4">
 							<a href="#'.$plantas[$i]['codigo'].'" class="modal-trigger">
 								<div class="card hoverable">
 									<div class="card-image waves-effect waves-block waves-light">
-										<img class="activator fotos" src="img/plantas/'.$plantas[$i]['nome'].'.jpeg" style="height: 40vh">
+										<img class="activator fotos" src="img/plantas/'.$plantas[$i]['nome'].'.svg" style="height: 40vh">
 									</div>
 									<div class="card-content">
 										<span class="card-title activator grey-text text-darken-4">'.$plantas[$i]['nome'].'<i class="material-icons right">more_vert</i></span>
@@ -53,7 +53,7 @@
 					<div id="'.$plantas[$i]['codigo'].'" class="modal modal-plantas">
 						<div class="modal-content">
 							<h3>'.$plantas[$i][2].'</h3>
-							<h5>'.$plantas[$i][1].'</h5>
+							<h6 style="font-family: sans; font-style: italic">'.$plantas[$i][1].'</h6>
 							<p><img src="img/plantas/'.$plantas[$i][2].'.jpeg" width="300rem"></p>
 							<p>'.$plantas[$i][3].'</p>
 						</div>

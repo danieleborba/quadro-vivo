@@ -12,7 +12,7 @@
 	function geraSelectPlantas($default, $tabela, $selecao, $value, $descricao, $select, $tipo) {
 		$sql = 'select * from ' .$tabela. ' where tipo = '.$tipo.' order by ' .$descricao;
 		echo '<select class="icons" name="'.$select.'" id="'.$select.'">';
-		echo '<option value="0" disabled>'.$default.'</option>';
+		echo '<option value="" disabled selected>'.$default.'</option>';
 		$crud = new Crud;
 		$row = $crud->select($sql);
 		$cont = 0;

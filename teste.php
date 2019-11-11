@@ -2,8 +2,6 @@
 	require('autoload.php');
 
     $crud = new Crud;
-    $crud->setTabela('usuario');
-    echo $crud->getTabela();
-    $crud->select("select * from usuario where usuario = 'arvore'");
+    $crud->insert('insert into tipoQuadro values (null, "Enorme")');
 
 ?>

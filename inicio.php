@@ -91,35 +91,35 @@
                     <li class="nplantas">
                         <div class="input-field">
                             <?php
-                                geraSelectPlantas('Escolha uma hortaliça:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p2', 3);
+                                geraSelectPlantas('Escolha outra hortaliça:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p2', 3);
                             ?>
                         </div>
                     </li>
                     <li class="nplantas">
                         <div class="input-field">
                             <?php
-                                geraSelectPlantas('Escolha uma hortaliça:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p3', '1 or tipo = 2');
+                                geraSelectPlantas('Escolha um tempero ou chá:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p3', '1 or tipo = 2');
                             ?>
                         </div>
                     </li>
                     <li class="nplantas">
                         <div class="input-field">
                             <?php
-                                geraSelectPlantas('Escolha uma hortaliça:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p4', '1 or tipo = 2');
+                                geraSelectPlantas('Escolha outro tempero ou chá:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p4', '1 or tipo = 2');
                             ?>
                         </div>
                     </li>
                     <li class="nplantas">
                         <div class="input-field">
                             <?php
-                                geraSelectPlantas('Escolha uma hortaliça:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p5', '4 or tipo = 5');
+                                geraSelectPlantas('Escolha uma planta ornamental:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p5', '4 or tipo = 5');
                             ?>
                         </div>
                     </li>
                     <li class="nplantas">
                         <div class="input-field">
                             <?php
-                                geraSelectPlantas('Escolha uma hortaliça:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p6', '4 or tipo = 5');
+                                geraSelectPlantas('Escolha outra planta ornamental:', 'planta_tipo', 0, 'codigo_planta', 'nome', 'p6', '4 or tipo = 5');
                             ?>
                         </div>
                     </li>
