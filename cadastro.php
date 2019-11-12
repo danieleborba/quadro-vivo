@@ -20,43 +20,43 @@
 		<?php gerarNavIndex() ?>
 	</header>
 
-	<main style="min-height: 90vh">
-		<div class="container center valign-wrapper">
-			<div class='row'><br>
-				<h3 class="red-text">Cadastro</h3>
-
+	<main>
+		<div class="row center">
+			<div class="col l8	" style="padding-left: 10vw">
 				<form action="acao.php" method="post">
 					<div class="row">
-						<div class="input-field col l5 offset-l1 s12">
+						<br><br>
+						<h3 class="red-text">Cadastro</h3>
+						<div class="input-field col s6">
 							<i class="material-icons prefix">account_circle</i>
 							<input required id="nome" name="nome" type="text" class="validate">
 							<label for="nome">Nome</label>
 						</div>
 
-						<div class="input-field col l5 s12">
+						<div class="input-field col s6">
 							<i class="material-icons prefix">mail</i>
 							<input required id="email" type="email" class="validate" name="email">
 							<label for="email">Email</label>
 						</div>
-						<div class="input-field col l5 offset-l1 s12">
+						<div class="input-field col s6">
 							<i class="material-icons prefix">lock</i>
 							<input required id="password" type="password" class="validate" name="senha">
 							<label for="password">Senha</label>
 						</div>
 
-						<div class="input-field col l5 s12">
+						<div class="input-field col s6">
 							<i class="material-icons prefix">lock_outline</i>
 							<input required id="password2" type="password" class="validate" name="confirmacao">
 							<label for="password2">Confirmar Senha</label>
 						</div>
 
-						<div class="input-field col l5 offset-l1 s12">
+						<div class="input-field col s6">
 							<i class="material-icons prefix">person_outline</i>
 							<input required id="usuario" type="text" class="validate" name="usuario">
 							<label for="usuario">Usuário</label>
 						</div>
 
-						<div class="input-field col l5 s12">
+						<div class="input-field col s6">
 							<i class="material-icons prefix">shopping_cart</i>
 							<input required id="codigoCompra" type="number" class="validate" name="codigoCompra">
 							<label for="codigoCompra">Código da Compra</label>
@@ -69,10 +69,12 @@
 							<input required type="hidden" name="acao" value="cadastrar">
 						</div>
 					</div>
+					</form>
 			</div>
-		</div>
-		</form>
-		</div>
+			<div class="col l4" style="padding-right: 5vw">
+				<br><br><br>
+				<img src="img/humaaans/p3.svg" alt="Pessoa rodeada de plantas apontando para os campos do cadastro" width="85%">
+			</div>
 		</div>
 	</main>
 

@@ -12,7 +12,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    }
+    font-display: swap;
+}
 
     main {
     flex: 1 0 auto;
@@ -4470,10 +4471,6 @@ nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.b
   line-height: inherit;
 }
 
-nav ul a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 nav ul.left {
   float: left;
 }
@@ -6036,7 +6033,7 @@ body.keyboard-focused .dropdown-content li:focus {
 
 .chips {
   border: none;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid #f44336;
   -webkit-box-shadow: none;
           box-shadow: none;
   margin: 0 0 8px 0;
@@ -6149,7 +6146,7 @@ button:focus {
 
 label {
   font-size: 0.8rem;
-  color: red;
+  color: grey;
 }
 
 /* Text Inputs + Textarea
@@ -6184,7 +6181,7 @@ input[type=search]:not(.browser-default),
 textarea.materialize-textarea {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 2px solid lightgrey;
   border-radius: 0;
   outline: none;
   height: 3rem;
@@ -6257,7 +6254,7 @@ input[type=search]:not(.browser-default):disabled + label,
 input[type=search]:not(.browser-default)[readonly="readonly"] + label,
 textarea.materialize-textarea:disabled + label,
 textarea.materialize-textarea[readonly="readonly"] + label {
-  color: red;
+  color: darkgrey;
 }
 
 input:not([type]):focus:not([readonly]),
@@ -6273,9 +6270,9 @@ input[type=tel]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  -webkit-box-shadow: 0 1px 0 0 #26a69a;
-          box-shadow: 0 1px 0 0 #26a69a;
+  border-bottom: 1px solid #89c5ccff;
+  -webkit-box-shadow: 0 1px 0 0 #89c5ccff;
+          box-shadow: 0 1px 0 0 #89c5ccff;
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -6291,7 +6288,7 @@ input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
 input[type=number]:not(.browser-default):focus:not([readonly]) + label,
 input[type=search]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: red;
+  color: #89c5ccff;
 }
 
 input:not([type]):focus.valid ~ label,
@@ -6323,7 +6320,7 @@ input[type=tel]:not(.browser-default):focus.invalid ~ label,
 input[type=number]:not(.browser-default):focus.invalid ~ label,
 input[type=search]:not(.browser-default):focus.invalid ~ label,
 textarea.materialize-textarea:focus.invalid ~ label {
-  color: red;
+  color: #64b5f6;
 }
 
 input:not([type]).validate + label,
@@ -6399,9 +6396,9 @@ input[type=search].invalid:not(.browser-default):focus,
 textarea.materialize-textarea.invalid,
 textarea.materialize-textarea.invalid:focus, .select-wrapper.invalid > input.select-dropdown,
 .select-wrapper.invalid > input.select-dropdown:focus {
-  border-bottom: 1px solid #F44336;
-  -webkit-box-shadow: 0 1px 0 0 #F44336;
-          box-shadow: 0 1px 0 0 #F44336;
+  border-bottom: 1px solid #89c5ccff;
+  -webkit-box-shadow: 0 1px 0 0 #89c5ccff;
+          box-shadow: 0 1px 0 0 #89c5ccff;
 }
 
 input:not([type]).valid ~ .helper-text[data-success],
@@ -6522,7 +6519,7 @@ input[type=search]:not(.browser-default):focus.invalid ~ .helper-text:after,
 textarea.materialize-textarea.invalid ~ .helper-text:after,
 textarea.materialize-textarea:focus.invalid ~ .helper-text:after, .select-wrapper.invalid ~ .helper-text:after {
   content: attr(data-error);
-  color: red;
+  color: grey;
 }
 
 input:not([type]) + label:after,
@@ -6575,7 +6572,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 }
 
 .input-field > label {
-  color: #9e9e9e;
+  color: #424242;
   position: absolute;
   top: 0;
   left: 0;
@@ -6633,7 +6630,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 }
 
 .input-field .prefix.active {
-  color: red;
+  color: #F44336;
 }
 
 .input-field .prefix ~ input,
@@ -7217,7 +7214,7 @@ select {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid #f44336;
   outline: none;
   height: 3rem;
   line-height: 3rem;
@@ -8336,7 +8333,7 @@ input[type=range]::-ms-thumb {
 }
 
 .slider .slides {
-  background-color: #9e9e9e;
+  background-color: #f44336;
   margin: 0;
   height: 400px;
 }

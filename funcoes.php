@@ -3,9 +3,9 @@
 
 	function gerarImagem($tamanho, $estilo) {
 		if ($_SESSION['imagem'] == 'null') {
-			return '<img class="circle" src="img/usuarios/fazendeiro.png" style="width: '.$tamanho. '; '.$estilo.'>';
+			return '<img class="circle" src="img/usuarios/fazendeiro.png" style="width: '.$tamanho. '; '.$estilo.' alt="Ilustração de um fazendeiro">';
 		} else {
-			return '<img class="circle" src="'.$_SESSION['imagem'].'" style="max-width: '.$tamanho. '; min-width: '.$tamanho. '; '.$estilo.'>';
+			return '<img class="circle" src="'.$_SESSION['imagem'].'" style="max-width: '.$tamanho. '; min-width: '.$tamanho. '; '.$estilo.' alt="Foto de perfil do usuário>';
 		}
 	}
 
@@ -46,29 +46,30 @@
 	}
 
 	function gerarNavIndex() {
-		echo '<nav class="white" role="navigation">
-    <div class="nav-wrapper">
-      <a id="logo-container" href="index.php" class="brand-logo red-text" style="margin-left: 2.5vw"><img src="img/logo/logo.svg" style="height: 3.5rem; margin-top: 0.8vh"></a>
-      <ul class="right hide-on-med-and-down">
-	  <li><a href="sobre.php">Sobre</a></li>
-        <li><a href="cadastro.php">Cadastro</a></li>
-		<li><a href="login.php">Login</a></li>
-      </ul>
+		echo '<nav class="white" role="navigation" style="box-shadow: none">
+		<div class="nav-wrapper">
+		<a id="logo-container" href="index.php" class="brand-logo red-text" style="margin-left: 2.5vw"><img src="img/logo/logo.svg" style="height: 3.5rem; margin-top: 0.8vh" alt="Logo do Quadro Vivo, uma mão segurando uma muda de planta"></a>
+		<ul class="right hide-on-med-and-down">
+			<li><a href="sobre.php">Sobre</a></li>
+			<li><a href="fotos.php">Fotos</a></li>
+			<li><a href="cadastro.php">Cadastro</a></li>
+			<li><a href="login.php">Login</a></li>
+		</ul>
 
-      <ul id="nav-mobile" class="sidenav">
-	  	<li><a href="sobre.php"><i class="material-icons green-text">info</i>Sobre</a></li>
-        <li><a href="cadastro.php"><i class="material-icons green-text">assignment_ind</i>Cadastro</a></li>
-		<li><a href="login.php"><i class="material-icons green-text">account_circle</i>Login</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons green-text">menu</i></a>
-    </div>
-  </nav>';
+		<ul id="nav-mobile" class="sidenav">
+			<li><a href="sobre.php"><i class="material-icons green-text">info</i>Sobre</a></li>
+			<li><a href="cadastro.php"><i class="material-icons green-text">assignment_ind</i>Cadastro</a></li>
+			<li><a href="login.php"><i class="material-icons green-text">account_circle</i>Login</a></li>
+		</ul>
+		<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons green-text">menu</i></a>
+	</div>
+	</nav>';
 	}
 
 	function gerarNavPlantas() {
 		echo '<nav class="white" role="navigation">
     <div class="nav-wrapper">
-      <a id="logo-container" href="index.php" class="brand-logo red-text" style="margin-left: 1em"><img src="img/logo/logo3.png" style="height: 2rem; width: 7em;"></a>
+      <a id="logo-container" href="index.php" class="brand-logo red-text" style="margin-left: 1em"><img src="img/logo/logo3.png" style="height: 2rem; width: 7em;" alt="Logo do Quadro Vivo, uma mão segurando uma muda de planta"></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#login" class="modal-trigger">Login</a></li>
       </ul>
@@ -84,7 +85,7 @@
 	function gerarNavAdm() {
 		echo '<nav class="white" role="navigation">
     <div class="nav-wrapper">
-      <a id="logo-container" href="index.php" class="brand-logo red-text" style="margin-left: 1em"><img src="img/logo/logo3.png" style="height: 2em; width: 7em;"></a>
+      <a id="logo-container" href="index.php" class="brand-logo red-text" style="margin-left: 1em"><img src="img/logo/logo3.png" style="height: 2em; width: 7em;" alt="Logo do Quadro Vivo, uma mão segurando uma muda de planta"></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="acao.php?acao=logoutAdm" class="modal-trigger">Sair</a></li>
       </ul>
@@ -106,7 +107,7 @@
 				</li>
 				<li>Olá, <?php echo $_SESSION['nome'] ?>!</li>
 			</ul>
-			<a id="logo-container" href="home.php" class="brand-logo red-text center"><img src="img/logo/logo3.png" style="height: 3rem; width: 16rem; margin-top: .6rem"></a>
+			<a id="logo-container" href="home.php" class="brand-logo red-text center"><img src="img/logo/logo3.png" style="height: 3rem; width: 16rem; margin-top: .6rem" alt="Logo do Quadro Vivo, uma mão segurando uma muda de planta"></a>
 			<ul class="right hide-on-med-and-down">
 				<li><a href="plantas.php">Plantas</a></li>
 				<li><a href="perfil.php">Perfil</a></li>
@@ -144,7 +145,7 @@
 						<p class="text-darken-4 grey-text text-lighten-4">Estudantes do Técnico em Informática buscando reaproximar as pessoas da natureza por meio da tecnologia.</p>
 					</div>
 					<div class="col s12 l3 hide-on-small-only center">
-						<img class="circle" src="img/equipe/equipe5.jpeg" width="175rem" alt="Foto de Daniele e Daiane, autoras do projeto">
+						<img class="circle" src="img/equipe/equipe5.jpeg" width="175rem" height="175rem" alt="Foto de Daniele e Daiane, autoras do projeto">
 					</div>
 				</div>
 		</footer>';

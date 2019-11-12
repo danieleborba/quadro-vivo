@@ -41,7 +41,7 @@
 							<a href="#'.$plantas[$i]['codigo'].'" class="modal-trigger">
 								<div class="card hoverable">
 									<div class="card-image waves-effect waves-block waves-light">
-										<img class="activator fotos" src="img/plantas/'.$plantas[$i]['nome'].'.svg" style="height: 40vh">
+										<img class="activator fotos" src="img/plantas-svg/'.$plantas[$i]['nome'].'.svg" alt="ILustração da planta '.$plantas[$i]['nome'].'" style="height: 40vh">
 									</div>
 									<div class="card-content">
 										<span class="card-title activator grey-text text-darken-4">'.$plantas[$i]['nome'].'<i class="material-icons right">more_vert</i></span>
@@ -54,7 +54,7 @@
 						<div class="modal-content">
 							<h3>'.$plantas[$i][2].'</h3>
 							<h6 style="font-family: sans; font-style: italic">'.$plantas[$i][1].'</h6>
-							<p><img src="img/plantas/'.$plantas[$i][2].'.jpeg" width="300rem"></p>
+							<p><img src="img/plantas/'.$plantas[$i][2].'.jpeg" alt="Foto da planta '.$plantas[$i][2].'" width="300rem"></p>
 							<p>'.$plantas[$i][3].'</p>
 						</div>
 					</div>';

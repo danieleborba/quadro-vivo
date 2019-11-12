@@ -1,7 +1,16 @@
 @charset 'utf-8';
 
+nav li a {
+	font-weight: 500;
+}
+
+nav li a:hover {
+	color: #1976d2;
+	-webkit-transition: color .32s ease;
+}
+
 .pagina {
-	min-height: 95vh;
+	min-height: 90vh;
 }
 
 .titulo {

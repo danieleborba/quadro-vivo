@@ -25,6 +25,10 @@
 			letter-spacing: 0.05rem;
 		}
 
+		.valign-wrapper {
+			min-height: 90vh;
+		}
+
 		@media only screen and (max-width: 600px) {
 		  .frame {
 			max-width: 100%;
@@ -37,7 +41,7 @@
 <body>
 
 	<header>
-		<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+		<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons red">menu</i></a>
 	</header>
 
 	<main>
@@ -45,7 +49,7 @@
 			<div class="col l3">
 				<ul id="slide-out" class="sidenav sidenav-fixed black-text center" style="padding-top: 25vh">
 					<li><img src="img/mao.svg" width="80rem" alt="logo do Quadro Vivo"></li>
-					<li class="grey lighten-3"><a href="home.php">Monitoramento</a></li>
+					<li class="light-blue lighten-5"><a href="home.php">Monitoramento</a></li>
 					<li><a href="plantas.php">Plantas</a></li>
 					<li><a href="configuracoes.php">Configurações</a></li>
 					<li><a href="acao.php?acao=logout">Sair</a></li>
